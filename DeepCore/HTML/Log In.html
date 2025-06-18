@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Pagina principal</title>
+    <link rel="stylesheet" href="..\CSS\Log In.css"/>
+    <meta charset="UTF-8">
+    </head>
+    <body>
+        <header class="header">
+            <div class="container-header">
+                <a href="index.html" class="logo">
+                    <img src="..\recursos\logo.png" alt="Deepcore" width="70" height="70">
+                </a>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <nav class="nav">
+                    <a href="index.html">Inicio</a>
+                    <a href="#s">Servicios</a>
+                    <a href="precios.html">Precios</a>
+                    <a href="#">Login <img src="..\recursos\Iconos\user-interface.png" alt="Login" width="20" height="20"></a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="container-main">
+                <div  id="login_admin" class="Icon-login-windows">
+                  <img src="..\recursos\Iconos\administrador.png" alt="Admin" width="100" height="100">
+                    <label for="btn-admin-login">Administrador</label>
+            </div>
+            <div id="login_Usuario" class="Icon-login-windows" href="Panel-de-usuario.html">
+                <img src="..\recursos\Iconos\usuario-comun.png" alt="Usuario" width="100" height="100">
+                <label for="btn-user-login">Usuario</label>
+            </div>
+            <script>
+                document.getElementById("login_admin").addEventListener("click", function() {
+                    window.location.href = "Panel_admin.html"; 
+                });
+            </script>
+            <script>
+                document.getElementById("login_Usuario").addEventListener("click", function() {
+                    window.location.href = "Panel_usuario.html"; 
+                });
+            </script>
+       
+        </main>
+    </body>
+</html>

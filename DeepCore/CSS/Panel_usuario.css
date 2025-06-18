@@ -1,0 +1,50 @@
+.container-main {
+    display: flex;
+    flex-direction: row ;
+    margin: 50px auto;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.user-content {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+    height: 20vh;
+    padding: 20px;
+    margin: auto 100px 50px 100px;
+    /*background-color: #c548ff;*/
+    border: #7c00b6 solid 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+}
+#conten-AAW {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente si hay contenido */
+    background-image: url(../recursos/AAW.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#conten-P-para-E {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente si hay contenido */
+    background-image: url(../recursos/ai-generated-9387236_1920.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.tex-conten{
+    color: #fff;
+    background-color: black;
+    width: 100%;
+    max-width: 200px;
+    font-size: 1.2rem;
+    border: #fff solid 2px;
+    text-align: center;
+    padding: 2px;
+    font-weight: bold;
+}

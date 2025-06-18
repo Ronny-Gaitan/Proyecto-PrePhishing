@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Deepcore</title>
+    <link rel="stylesheet" href="..\CSS\index.css">
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 120px auto 0 auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .login-container label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 0.7rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 0.7rem;
+            background: #6f00ff;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .login-container button:hover {
+            background: #4b0082;
+        }
+        .login-container .register-link {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .success-message {
+            color: green;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm" autocomplete="off" method="post">
+            <div id="message"></div>
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" required>
+            
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Entrar</button>
+        </form>
+        <a class="register-link" href="#">¿No tienes cuenta? Regístrate</a>
+    </div>
+    <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        const messageDiv = document.getElementById('message');
+        fetch('login.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.text())
+        .then(data => {
+            if(data.trim() === "success") {
+                messageDiv.innerHTML = '<div class="success-message">¡Login exitoso!</div>';
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 1000);
+            } else {
+                messageDiv.innerHTML = '<div class="error-message">Usuario o contraseña incorrectos.</div>';
+            }
+        })
+        .catch(() => {
+            messageDiv.innerHTML = '<div class="error-message">Error de conexión.</div>';
+        });
+    });
+    </script>
+</body>
+</html>

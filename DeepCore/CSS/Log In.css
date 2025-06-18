@@ -1,0 +1,139 @@
+/* Header */
+.header {
+    width: 100%;
+    background: #6f00ff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.container-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+.logo img {
+    display: block;
+    height: 60px;
+}
+.menu-toggle {
+    display: none;
+}
+.menu-icon {
+    display: none;
+    font-size: 2.2rem;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.nav {
+    display: flex;
+    gap: 1.5rem;
+}
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+.nav a:hover {
+    color: #ffe600;
+    border-bottom: 2px solid #ffe600;
+}
+main {
+    padding-top: 80px; /* Adjust for fixed header */
+}
+.img-main{
+    
+    float: right;
+    line-height: 100px;
+    margin: 0px 10px 100px 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container-header {
+        padding: 0 1rem;
+    }
+    .nav {
+        gap: 1rem;
+    }
+}
+@media (max-width: 700px) {
+    .menu-icon {
+        display: block;
+    }
+    .nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #6f00ff;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 0;
+        transform: translateY(-120%);
+        transition: transform 0.3s;
+        z-index: 99;
+    }
+    .menu-toggle:checked + .menu-icon + .nav {
+        transform: translateY(0);
+    }
+}
+
+/* Main Content */
+main{
+    background-color: #f8fafc;
+}
+.container-main{
+    display: flex;
+    flex-direction: row;
+    height: 58vh;
+    max-width: 83%;
+    margin: 50px auto;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebebeb;
+    border: #6f00ff solid 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+}
+.Icon-login-windows{
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: 120px;
+    align-items: center;
+    font-size: 20px;
+    color: #667;
+    background-color: #f8fafc;
+    padding: 45px;
+    margin: auto;
+    border: #667 solid 2px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
