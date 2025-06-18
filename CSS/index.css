@@ -1,7 +1,7 @@
 /* Header */
 .header {
     width: 100%;
-    background: #0099ff;
+    background: #6f00ff;
     position: fixed;
     top: 0;
     left: 0;
@@ -53,9 +53,10 @@ main {
     padding-top: 80px; /* Adjust for fixed header */
 }
 .img-main{
+    
     float: right;
     line-height: 100px;
-    margin: auto;
+    margin: 0px 10px 100px 10px;
 }
 
 /* Responsive */
@@ -76,7 +77,7 @@ main {
         top: 70px;
         left: 0;
         width: 100%;
-        background: #0099ff;
+        background: #6f00ff;
         flex-direction: column;
         align-items: center;
         gap: 2rem;
@@ -91,25 +92,28 @@ main {
 }
 
 /* Main Content */
-.bienvenida {
-    position: relative;
+#bienvenida {
     text-align: center;
-    margin-top: 100px;
-    font-size: 100px;
-    font-weight: bold;
-    color: #333;
-    position: center;
+    margin-top: 10px; /* Adjust for fixed header */
+    font-size: 45px;
+    color: #f8fafc;
+    background-color: #222;
+    font-weight: 800;
+    padding: 20px 0;
+    width: auto;
+
 }
-.frase_bienvenida {
+#frase_bienvenida {
     text-align: center;
     font-size: 30px;
-    color: #666;
-    margin-top: 20px;
+    color: #667;
+    margin-top: 10px;
+    padding: 20px 0;
 }
 #Servicios {
-    position: center;
+    position: relative;
     text-align: center;
-    text-decoration: underline red;
+    text-decoration: underline rgb(255, 0, 0);
 }
 .simulador, .formacion {
     max-width: 700px;
@@ -122,13 +126,24 @@ main {
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
 }
+.descripcion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 .tex-servicios {
     text-align: left;
     max-width: 500px;
     margin-bottom: 0px;
+    flex: 1 1 300px;
 }
 .img-servicios {
-    position: relative;
-    margin: -90px 0px 0px 580px;
+    position: static;
+    margin: 0 auto;
+    
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
 }
 
