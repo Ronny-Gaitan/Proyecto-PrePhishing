@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Panel de Usuario</title>
+        <link rel="stylesheet" href="..\CSS\Panel_usuario.css"/>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="container-header">
+                <a href="index.html" class="logo">
+                    <img src="..\recursos\logo.png" alt="Deepcore" width="70" height="70">
+                </a>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <nav class="nav">
+                    <a href="index.html">Inicio</a>
+                    <a href="#s">Servicios</a>
+                    <a href="precios.html">Precios</a>
+                    <a href="#">Login <img src="..\recursos\Iconos\user-interface.png" alt="Login" width="20" height="20"></a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container-main">
+                <!-- Contenido del panel de usuario -->
+                <a href="Contenido1.html">Bienvenido al Panel de Usuario</a>
+                <!-- Aquí puedes agregar más contenido específico del panel de usuario -->
+                 <div id="conten-AAW" class="user-content">
+                    <p class="tex-conten">Ataques de aplicaciones web</p>
+                 </div>
+                 <div id="conten-P-para-E" class="user-content">
+                    <p class="tex-conten">Phishing para empresas</p>
+                 </div>   
+                 <script>
+                document.getElementById("conten-AAW").addEventListener("click", function() {
+                    window.location.href = "Contenido1.html"; 
+                });
+            </script>  
+            <script>
+                document.getElementById("conten-P-para-E").addEventListener("click", function() {
+                    window.location.href = "Contenido2.html"; 
+                }); 
+            </script>        
+            </div>
+        </main>
+    </body>
+</html>
