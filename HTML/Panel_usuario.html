@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Panel de Usuario</title>
-        <link rel="stylesheet" href="..\CSS\Panel_usuario.css"/>
+        <link rel="stylesheet" href=".\CSS\Panel_usuario.css"/>
         <meta charset="UTF-8">
     </head>
 
@@ -18,7 +18,7 @@
                     <a href="index.html">Inicio</a>
                     <a href="#s">Servicios</a>
                     <a href="precios.html">Precios</a>
-                    <a href="#">Login <img src="..\recursos\Iconos\user-interface.png" alt="Login" width="20" height="20"></a>
+                    <a href="#">Login <img src=".\recursos\Iconos\user-interface.png" alt="Login" width="20" height="20"></a>
                 </nav>
             </div>
         </header>
@@ -26,8 +26,6 @@
         <main>
             <div class="container-main">
                 <!-- Contenido del panel de usuario -->
-                <a href="Contenido1.html">Bienvenido al Panel de Usuario</a>
-                <!-- Aquí puedes agregar más contenido específico del panel de usuario -->
                  <div id="conten-AAW" class="user-content">
                     <p class="tex-conten">Ataques de aplicaciones web</p>
                  </div>
@@ -35,10 +33,10 @@
                     <p class="tex-conten">Phishing para empresas</p>
                  </div>   
                  <script>
-                document.getElementById("conten-AAW").addEventListener("click", function() {
+                document.getElementById("login_admin").addEventListener("click", function() {
                     window.location.href = "Contenido1.html"; 
                 });
-            </script>  
+            </script>
             <script>
                 document.getElementById("conten-P-para-E").addEventListener("click", function() {
                     window.location.href = "Contenido2.html"; 
