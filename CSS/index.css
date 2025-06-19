@@ -1,13 +1,35 @@
-/* Header */
-.header {
-    width: 100%;
-    background: #6f00ff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+/* ====== Reset y base ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f9f9fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =========================
+   Header
+   ========================= */
+.header, header {
+  background-color: #6a0dad;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -17,13 +39,19 @@
     justify-content: space-between;
     height: 70px;
 }
+
 .logo img {
     display: block;
     height: 60px;
+    width: auto;
+    object-fit: contain;
+    alt: "Logo";
 }
+
 .menu-toggle {
     display: none;
 }
+
 .menu-icon {
     display: none;
     font-size: 2.2rem;
@@ -32,11 +60,14 @@
     user-select: none;
 }
 
-
+/* =========================
+   Navegación
+   ========================= */
 .nav {
     display: flex;
     gap: 1.5rem;
 }
+
 .nav a {
     color: #fff;
     text-decoration: none;
@@ -44,22 +75,38 @@
     padding: 8px 0;
     border-bottom: 2px solid transparent;
     transition: color 0.3s, border-bottom 0.3s;
+    outline: none;
 }
+
+.nav a:focus,
 .nav a:hover {
     color: #ffe600;
     border-bottom: 2px solid #ffe600;
 }
+
+/* =========================
+   Main
+   ========================= */
 main {
-    padding-top: 80px; /* Adjust for fixed header */
-}
-.img-main{
-    
-    float: right;
-    line-height: 100px;
-    margin: 0px 10px 100px 10px;
+    padding-top: 80px; 
+    margin: auto;/* Ajuste por header fijo */
 }
 
-/* Responsive */
+.img-main {
+    display: block;
+    margin: 32px auto 40px auto;
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    object-fit: cover;
+    background: #f8fafc;
+}
+
+/* =========================
+   Responsive
+   ========================= */
 @media (max-width: 900px) {
     .container {
         padding: 0 1rem;
@@ -67,7 +114,41 @@ main {
     .nav {
         gap: 1rem;
     }
+    .img-main {
+        float: none;
+        display: block;
+        margin: 24px auto 32px auto;
+        max-width: 95vw;
+    }
 }
+
+@media (max-width: 768px) {
+  .hero {
+    font-size: 1.6rem;
+    padding: 30px 10px;
+  }
+
+  .header, header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 10px;
+  }
+
+  .header nav,
+  header nav {
+    margin-top: 10px;
+  }
+
+  .content-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
 @media (max-width: 700px) {
     .menu-icon {
         display: block;
@@ -91,40 +172,72 @@ main {
     }
 }
 
-/* Main Content */
+/* =========================
+   Main Content
+   ========================= */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 50px 0 50px;
+}
+    
 #bienvenida {
     text-align: center;
-    margin-top: 10px; /* Adjust for fixed header */
-    font-size: 45px;
+    margin-top: 10px;
+    font-size: 2.8rem;
     color: #f8fafc;
     background-color: #222;
     font-weight: 800;
     padding: 20px 0;
-    width: auto;
-
+    width: 100%;
+    letter-spacing: 1px;
 }
+
 #frase_bienvenida {
     text-align: center;
-    font-size: 30px;
+    font-size: 1.5rem;
     color: #667;
     margin-top: 10px;
     padding: 20px 0;
 }
-#Servicios {
-    position: relative;
-    text-align: center;
-    text-decoration: underline rgb(255, 0, 0);
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
 }
+
+#Servicios {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    text-align: center;
+    text-decoration: underline wavy #ff0000;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
 .simulador, .formacion {
     max-width: 700px;
-    margin: 0 auto;
-    margin-top: 25px;
-    padding: 10px;
+    margin: 25px auto 0 auto;
+    padding: 20px;
     background: #fff;
-    border: 2px solid;
-    border-color: #333;
+    border: 2px solid #333;
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.conten.flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+   
 }
 .descripcion {
     display: flex;
@@ -132,18 +245,56 @@ main {
     gap: 20px;
     flex-wrap: wrap;
 }
+
 .tex-servicios {
     text-align: left;
     max-width: 500px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     flex: 1 1 300px;
+    font-size: 1.1rem;
+    color: #222;
 }
+
 .img-servicios {
-    position: static;
     margin: 0 auto;
-    
     width: 100px;
     height: 100px;
     flex-shrink: 0;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #f3f3f3;
+    display: block;
 }
 
+/* =========================
+   Accesibilidad y detalles
+   ========================= */
+:focus {
+    outline: 2px solid #ffe600;
+    outline-offset: 2px;
+}
+
+body {
+    background: #f4f6fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+/* =========================
+   Pie de página
+   ========================= */
+footer {
+    background-color: #6e11b1;
+    margin: 0 50px 0 50px;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer a {
+    text-decoration: none;
+}
