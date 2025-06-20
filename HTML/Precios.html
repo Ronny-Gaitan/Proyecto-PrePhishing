@@ -1,13 +1,96 @@
 <!DOCTYPE html>
     <head>
         <title>Precios</title>
-        <link rel="stylesheet" href="..\CSS\contactos.css"/>
+        <!--<link rel="stylesheet" href="..\CSS\contactos.css"/>-->
         <meta charset="UTF-8">
+        <style>
+            .header {
+    width: 100%;
+    background: #6a0dad;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 70px;
+            }
+            .logo img {
+                display: block;
+                height: 60px;
+            }
+            .menu-toggle {
+                display: none;
+            }
+            .menu-icon {
+                display: none;
+                font-size: 2.2rem;
+                color: #fff;
+                cursor: pointer;
+                user-select: none;
+            }
+
+
+            .nav {
+                display: flex;
+                gap: 1.5rem;
+            }
+            .nav a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: 500;
+                padding: 8px 0;
+                border-bottom: 2px solid transparent;
+                transition: color 0.3s, border-bottom 0.3s;
+            }
+            .nav a:hover {
+                color: #ffe600;
+                border-bottom: 2px solid #ffe600;
+            }
+            .img-main{
+                float: right;
+                line-height: 100px;
+                margin: auto;
+            }
+
+            .container-main {
+                width: 80%;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            .pricing-table {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                position: relative;
+            }
+            .plan {
+                display: flex;
+                flex-direction: column;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                padding: 20px;
+                width: 30%;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+        </style>
     </head>
     <body>
         
 <header class="header">
-    <div class="container">
+    <div class="container-header">
         <a href="..\index.html" class="logo">
             <img src="..\recursos\Logo.png" alt="Deepcore" width="70" height="70">
         </a>
@@ -30,6 +113,10 @@
                     <div class="plan">
                         <h3>Plan Básico</h3>
                         <p class="price">$19.99/mes</p>
+                    </div>
+                    <div class="plan">
+                        <h3>Plan Estándar</h3>
+                        <p class="price">$29.99/mes</p>
         </main>
     </body>
         
