@@ -286,6 +286,10 @@ body {
    Pie de página
    ========================= */
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: #6e11b1;
     margin: 0 50px 0 50px;
     color: white;
@@ -297,4 +301,9 @@ footer {
 }
 footer a {
     text-decoration: none;
+    color:#f9f9fb
 }
+footer p {
+    margin-right: 50px;
+}
+
