@@ -3,45 +3,65 @@
     <head>
         <title>Panel de Usuario</title>
         <link rel="stylesheet" href="..\CSS\Panel_usuario.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <meta charset="UTF-8">
     </head>
 
     <body>
         <header class="header">
-            <div class="container-header">
+            <div class="container">
                 <a href="..\index.html" class="logo">
-                    <img src="..\recursos\logo.png" alt="Deepcore" width="70" height="70">
+                    <img src="..\recursos\Logo_2_simple.jpg" alt="Deepcore" width="85" height="70">
                 </a>
-                <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                <label for="menu-toggle" class="menu-icon">&#9776;</label>
-                <nav class="nav">
-                    <a href="..\index.html">Inicio</a>
-                    <a href="#s">Servicios</a>
-                    <a href="precios.html">Precios</a>
-                    <a href="#">Login <img src=".\recursos\Iconos\user-interface.png" alt="Login" width="20" height="20"></a>
-                </nav>
+                <!-- Si necesitas agregar navegación, agrégala aquí -->
             </div>
         </header>
 
         <main>
-            <div class="container-main">
-                <!-- Contenido del panel de usuario -->
-                 <div id="conten-AAW" class="user-content">
-                    <p class="tex-conten">Ataques de aplicaciones web</p>
-                 </div>
-                 <div id="conten-P-para-E" class="user-content">
-                    <p class="tex-conten">Phishing para empresas</p>
-                 </div>   
-                 <script>
-                document.getElementById("conten-AAW").addEventListener("click", function() {
-                    window.location.href = "Contenido1.html"; 
+            <!-- Barra lateral -->
+            <div class="container-lateral hidden">
+                <ul>
+                    <li><a href="Panel_usuario.html"><i class="fas fa-home"></i>&nbsp; Inicio</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i>&nbsp; Perfil</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i>&nbsp; Configuración</a></li>
+                    <li><a href="Log In.html"><i class="fas fa-sign-out-alt"></i>&nbsp; Salir</a></li>
+                </ul>
+            </div>
+            <button class="btn-barra-lateral"><!-- Botón para abrir/cerrar la barra lateral -->
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Script para abrir/cerrar la barra lateral -->
+            <script>
+                document.querySelector('.btn-barra-lateral').addEventListener('click', function() {
+                    document.querySelector('.container-lateral').classList.toggle('hidden');
                 });
             </script>
-            <script>
-                document.getElementById("conten-P-para-E").addEventListener("click", function() {
-                    window.location.href = "Contenido2.html"; 
-                }); 
-            </script>        
+
+            <div class="container-main">
+                <span id="titulo-panel-usuario" class="titulo-panel">
+                    <span>Tablero</span>                 
+                </span>
+                <!-- Contenido del panel de usuario -->
+                <section class="user-dashboard">
+                    
+                    <div id="conten-AAW" class="user-content">
+                        <p class="tex-conten">Ataques de aplicaciones web</p>
+                    </div>
+                    <div id="conten-P-para-E" class="user-content">
+                        <p class="tex-conten">Phishing para empresas</p>
+                    </div>   
+                    <script>
+                        document.getElementById("conten-AAW").addEventListener("click", function() {
+                            window.location.href = "Contenido1.html"; 
+                        });
+                    </script>
+                    <script>
+                        document.getElementById("conten-P-para-E").addEventListener("click", function() {
+                            window.location.href = "Contenido2.html"; 
+                        }); 
+                    </script>
+            </section>        
             </div>
         </main>
     </body>
