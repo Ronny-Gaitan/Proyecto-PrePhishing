@@ -53,16 +53,6 @@ main {
     margin: auto; /* Ajusta el margen superior para evitar que el contenido se superponga al header */
     padding-top: 80px;
 }
-.user-dashboard {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 32px;
-    margin: 50px auto;
-    padding: 20px;
-    align-items: stretch;
-    justify-items: center;
-}
-
 .titulo-panel {
     display: flex;
     flex-direction: row;
@@ -79,17 +69,6 @@ main {
     display: block;
     margin: auto;
     /*padding-left: 250px;*/
-}
-.user-content {
-    width: 100%;
-    max-width: 200px;
-    justify-content: center;
-    height: 20vh;
-    padding: 20px;
-    margin: auto 100px 50px 100px;
-    border: #18DFD5 solid 10px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.07);
 }
 .container-lateral {
     height: 100vh;
@@ -178,48 +157,40 @@ main {
 .container-main.expanded {
     margin-left: 0;
 }
-
-#conten-P-para-E {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Centra verticalmente si hay contenido */
-    background-image: url(../recursos/ai-generated-9387236_1920.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* Estilos para el botón de regresar */
+#btn-regresar {
+    position: fixed;
+    top: 30px;
+    left: 40px;
+    background-color: #7c00b6;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 200; /* Encima de otros elementos */
 }
-#conten-AAW {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Centra verticalmente si hay contenido */
-    background-image: url(../recursos/AAW.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.tex-conten{
-    color: #fff;
-    background-color: black;
-    width: 100%;
-    max-width: 200px;
-    font-size: 1.2rem;
-    border: #fff solid 2px;
+.titulo {
     text-align: center;
-    padding: 2px;
-    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
 }
-.user-test{
-    display: block;
-    margin: 32px auto 40px auto;
-    max-width: 620px;
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgb(0, 0, 0);
-    object-fit: cover;
-    background: #f8fafc;
+#contenedor-pruebas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;    
 }
+div #contenedor-pruebas .user-test {
+   margin: auto;
+   padding: auto;
 
+}
+div #contenedor-pruebas img {
+    border-radius: 10%;
+    height: auto;
+    width: 100%;
+    box-shadow: #000000 0px 0px 10px;
+}
 @media (max-width: 600px) {
     .container-lateral {
         width: 180px;

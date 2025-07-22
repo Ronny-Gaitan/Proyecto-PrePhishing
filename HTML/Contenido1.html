@@ -1,1 +1,59 @@
-<iframe src="../Archivos/Ataques a aplicaciones web.pdf" width="100%" height="100%"></iframe>
+<!DOCTYPE html>
+<html>  
+<head>
+    <title>Ataques a Aplicaciones Web</title>
+    <link rel="stylesheet" href="../CSS/Contenido.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+</head>
+    <body>
+        <header class="header">
+                <div class="container">
+                    <a href="..\index.html" class="logo">
+                        <img src="..\recursos\Logo_2_simple.jpg" alt="Deepcore" width="85" height="70">
+                    </a>
+                    <!-- Si necesitas agregar navegación, agrégala aquí -->
+                </div>
+            </header>
+
+            <main>
+                <!-- Barra lateral -->
+                <div class="container-lateral hidden">
+                    <ul>
+                        <li><a href="Panel_usuario.html"><i class="fas fa-home"></i>&nbsp; Inicio</a></li>
+                        <li><a href="#"><i class="fas fa-user"></i>&nbsp; Perfil</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i>&nbsp; Configuración</a></li>
+                        <li><a href="Log In.html"><i class="fas fa-sign-out-alt"></i>&nbsp; Salir</a></li>
+                    </ul>
+                </div>
+                <button class="btn-barra-lateral"><!-- Botón para abrir/cerrar la barra lateral -->
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Script para abrir/cerrar la barra lateral -->
+                <script>
+                    document.querySelector('.btn-barra-lateral').addEventListener('click', function() {
+                        document.querySelector('.container-lateral').classList.toggle('hidden');
+                    });
+                </script>
+            <div id="btn-regresar">   
+                <div id="btn-regresar-icon">
+                    <i class="fas fa-arrow-left"></i>
+                    Regresar
+                </div>
+                    <script>
+                        document.getElementById("btn-regresar-icon").addEventListener("click", function() {
+                            window.location.href = "Panel_usuario.html"; 
+                        });
+                    </script>
+            </div>
+                <section class="titulo">
+                    <h1>Ataques a Aplicaciones Web</h1>
+                </section>
+            <!-- Contenido principal -->
+                <section class="info">
+                <iframe src="../Archivos/Ataques a aplicaciones web.pdf" width="100%" height="100%"></iframe>
+                </section>
+            </main>
+    </body>
+</html>

@@ -51,45 +51,7 @@
 }
 main {
     margin: auto; /* Ajusta el margen superior para evitar que el contenido se superponga al header */
-    padding-top: 80px;
-}
-.user-dashboard {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 32px;
-    margin: 50px auto;
-    padding: 20px;
-    align-items: stretch;
-    justify-items: center;
-}
-
-.titulo-panel {
-    display: flex;
-    flex-direction: row;
-    width: 631px;
-    margin: 50px auto 20px auto;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    border-bottom-style: solid; /* Define el estilo del borde */
-    border-bottom-color: rgb(0, 0, 0); /* Define el color del borde */
-    border-bottom-width: 2px; /* Define el grosor del borde */
-}
-#titulo-prueBas, #mas-prueBas {
-    display: block;
-    margin: auto;
-    /*padding-left: 250px;*/
-}
-.user-content {
-    width: 100%;
-    max-width: 200px;
-    justify-content: center;
-    height: 20vh;
-    padding: 20px;
-    margin: auto 100px 50px 100px;
-    border: #18DFD5 solid 10px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+    padding-top: 100px;
 }
 .container-lateral {
     height: 100vh;
@@ -178,48 +140,39 @@ main {
 .container-main.expanded {
     margin-left: 0;
 }
-
-#conten-P-para-E {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Centra verticalmente si hay contenido */
-    background-image: url(../recursos/ai-generated-9387236_1920.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* Estilos para el botón de regresar */
+#btn-regresar {
+    position: fixed;
+    top: 30px;
+    left: 40px;
+    background-color: #7c00b6;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 200; /* Encima de otros elementos */
 }
-#conten-AAW {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Centra verticalmente si hay contenido */
-    background-image: url(../recursos/AAW.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.tex-conten{
-    color: #fff;
-    background-color: black;
-    width: 100%;
-    max-width: 200px;
-    font-size: 1.2rem;
-    border: #fff solid 2px;
+.titulo {
     text-align: center;
-    padding: 2px;
-    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
 }
-.user-test{
-    display: block;
-    margin: 32px auto 40px auto;
-    max-width: 620px;
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgb(0, 0, 0);
-    object-fit: cover;
-    background: #f8fafc;
+.info {
+    display: flex  ;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 1000px; /* Ajusta la altura según lo que necesites */
+    margin: 20px auto;
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
 }
 
+/* Responsive styles*/
 @media (max-width: 600px) {
     .container-lateral {
         width: 180px;
