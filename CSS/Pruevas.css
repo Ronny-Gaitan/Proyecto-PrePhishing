@@ -175,22 +175,61 @@ main {
     color: #333;
     margin-top: 20px;
 }
-#contenedor-pruebas {
+div #contenedor-pruebas {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;    
 }
-div #contenedor-pruebas .user-test {
-   margin: auto;
-   padding: auto;
-
+.u-test {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 32px auto 40px auto;
+    box-shadow: 0 4px 16px rgb(0, 0, 0.07);
+    background: #fff;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
 }
-div #contenedor-pruebas img {
+.u-test:hover {
+    box-shadow: 0 16px 32px rgb(6, 152, 205);
+    transform: translateY(-4px) scale(1.03);
+}
+div #contenedor-juegos .user-test {
+    display: block;
+    margin: 32px auto 40px auto;
+    max-width: 620px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgb(0, 0, 0);
+    background: #f8fafc;
+}
+div #contenedor-juegos .user-test img {
+    object-fit: contain;
     border-radius: 10%;
     height: auto;
     width: 100%;
     box-shadow: #000000 0px 0px 10px;
 }
+
+
+#contenedor-juegos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;    
+}
+div #contenedor-juegos .user-test {
+   margin: auto;
+   padding: auto;
+
+}
+
 @media (max-width: 600px) {
     .container-lateral {
         width: 180px;
