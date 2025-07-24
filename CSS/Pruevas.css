@@ -182,16 +182,17 @@ div #contenedor-pruebas {
 }
 .u-test {
     width: 100%;
-    max-width: 620px;
-    height: auto;
+    max-width: 1000px;
+    height: 200px;
     border-radius: 12px;
     padding: 20px;
     margin: 32px auto 40px auto;
     box-shadow: 0 4px 16px rgb(0, 0, 0.07);
     background: #fff;
-    display: block;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
+    display: flex;                /* Cambia de block a flex */
+    align-items: center;          /* Centra verticalmente */
+    justify-content: center;      /* Centra horizontalmente */
     cursor: pointer;
     transition: box-shadow 0.2s, transform 0.2s;
 }
@@ -199,8 +200,21 @@ div #contenedor-pruebas {
     box-shadow: 0 16px 32px rgb(6, 152, 205);
     transform: translateY(-4px) scale(1.03);
 }
+.u-test img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10%;
+}
+#contenedor-juegos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;   
+    justify-content: center; /* Centra horizontalmente los hijos */
+    align-items: center;     /* Centra verticalmente los hijos */
+}
 div #contenedor-juegos .user-test {
-    display: block;
+    display: flex;
     margin: 32px auto 40px auto;
     max-width: 620px;
     width: 100%;
@@ -217,18 +231,12 @@ div #contenedor-juegos .user-test img {
     width: 100%;
     box-shadow: #000000 0px 0px 10px;
 }
-
-
-#contenedor-juegos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;    
+#contenedor-juegos .user-test:hover {
+    box-shadow: 0 16px 32px rgb(6, 152, 205);
+    transform: translateY(-4px) scale(1.03);
 }
-div #contenedor-juegos .user-test {
-   margin: auto;
-   padding: auto;
 
-}
+
 
 @media (max-width: 600px) {
     .container-lateral {
