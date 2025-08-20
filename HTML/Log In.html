@@ -22,6 +22,17 @@
             </div>
         </header>
         <main>
+            <div id="btn-regresar">   
+                <div id="btn-regresar-icon">
+                    <i class="fas fa-arrow-left"></i>
+                    Regresar
+                </div>
+                <script>
+                    document.getElementById("btn-regresar-icon").addEventListener("click", function() {
+                        window.location.href = "../index.html"; 
+                    });
+                </script>
+            </div>
             <div class="container-main">
                 <div  id="login_admin" class="Icon-login-windows">
                   <img src="..\recursos\Iconos\administrador.png" alt="Admin" width="100" height="100">

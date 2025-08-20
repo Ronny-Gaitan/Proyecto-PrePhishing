@@ -108,6 +108,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 201;
 }
 .container-lateral ul {
     list-style: none;
@@ -179,7 +180,18 @@ main {
 .container-main.expanded {
     margin-left: 0;
 }
-
+#btn-regresar {
+    position: fixed;
+    top: 30px;
+    left: 40px;
+    background-color: #7c00b6;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 200; /* Encima de otros elementos */
+}
 #conten-P-para-E {
     display: flex;
     justify-content: center;

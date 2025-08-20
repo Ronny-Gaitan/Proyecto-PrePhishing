@@ -95,11 +95,23 @@ main {
 main{
     background-color: #f8fafc;
 }
+#btn-regresar {
+    position: fixed;
+    top: 80px;
+    left: 140px;
+    background-color: #7c00b6;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 200; /* Encima de otros elementos */
+}
 .container-main{
     display: flex;
     flex-direction: row;
     height: 58vh;
-    max-width: 83%;
+    max-width: 70%;
     margin: 50px auto;
     padding: 20px;
     align-items: center;

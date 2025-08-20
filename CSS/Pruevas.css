@@ -209,9 +209,9 @@ div #contenedor-pruebas {
 #contenedor-juegos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;   
-    justify-content: center; /* Centra horizontalmente los hijos */
-    align-items: center;     /* Centra verticalmente los hijos */
+    gap: 20px;  
+    place-items: center; /* Centra los elementos hijos */
+    margin: 0 auto;
 }
 div #contenedor-juegos .user-test {
     display: flex;
