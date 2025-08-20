@@ -222,7 +222,7 @@ main {
     font-weight: bold;
 }
 .user-test{
-    display: block;
+    display: flex;
     margin: 32px auto 40px auto;
     max-width: 620px;
     width: 100%;
